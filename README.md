@@ -1,11 +1,11 @@
 # sid-efficient-agents
 
-**A small, honest study: how little world-model does an agent need before planning beats trial-and-error?**
+**Study: how little world-model does an agent need before planning beats trial-and-error?**
 
 An agent dropped into an unfamiliar world can *react* (learn, per situation,
 which actions felt good) or *understand* (build a model of how the world works
-and plan on it). This repo reproduces — cleanly, seed-averaged, and honestly
-reported — two well-known facts in a small stochastic gridworld, and adds one
+and plan on it). This repo reproduces, cleanly, seed-averaged and honestly
+reported, two well known facts in a small stochastic gridworld and adds one
 small empirical characterization of my own:
 
 1. **Model-based learning is more sample-efficient.** An agent that learns a
@@ -13,13 +13,10 @@ small empirical characterization of my own:
    episodes than model-free Q-learning.
 2. **You don't need a complete model.** Starving the learned model to only its
    most recent *N* transitions, performance is useless below ~32 remembered
-   transitions and fully recovered by ~128 — most of the map turns out to be
+   transitions and fully recovered by ~128, most of the map turns out to be
    unnecessary.
 
-> **On novelty:** none is claimed. The underlying effects (Dyna-style
-> sample efficiency; planning with imperfect models) are decades old. This is a
-> reproduction plus a small empirical study, built to practice doing research
-> rigorously end to end. See [`PAPER.md`](PAPER.md) for the full writeup,
+> See [`PAPER.md`](PAPER.md) for the full writeup,
 > including limitations and an honest caveat about what each figure does and
 > does not show.
 
@@ -27,11 +24,11 @@ small empirical characterization of my own:
 
 ## Results
 
-**Sample efficiency — the model-based agent learns from far less experience:**
+**Sample efficiency - the model-based agent learns from far less experience:**
 
 ![sample efficiency](results/sample_efficiency.png)
 
-**How little model is enough — a sharp threshold around ~128 transitions:**
+**How little model is enough - a sharp threshold around ~128 transitions:**
 
 ![memory sweep](results/memory_sweep.png)
 
@@ -44,7 +41,7 @@ small empirical characterization of my own:
   its rules; agents see only `(state, action, reward, next_state)`.
 - **Baseline (model-free):** tabular Q-learning.
 - **Star (model-based):** estimates transitions and rewards by counting, then
-  plans with value iteration — the textbook Bellman backup, run on a *learned*
+  plans with value iteration - the textbook Bellman backup, run on a *learned*
   model instead of a given one.
 - **Rigor:** greedy evaluation with learning/exploration frozen; every number
   averaged over 20 random seeds with spread reported.
@@ -76,4 +73,4 @@ PAPER.md        the full, honest writeup
 
 ---
 
-*Built as a first end-to-end research exercise under [SID Machines](https://github.com/sidmachines). The goal was to earn the machinery — define a question, run a fair experiment, measure across seeds, report honestly — not to move the field. It's the first brick.*
+*Built as a end-to-end research under [SID Machines](https://github.com/sidmachines). The goal was to earn the machinery, define a question, run a fair experiment and to measure across seeds*
