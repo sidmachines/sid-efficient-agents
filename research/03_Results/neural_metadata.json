@@ -1,0 +1,34 @@
+{
+  "runs": 140,
+  "real_training_examples": 224000,
+  "wall_seconds": 26.750240299967118,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "parameters": 228,
+  "protocol": {
+    "role": "Exploratory secondary experiment specified before its own execution; separate from the primary agent study",
+    "question": "Does bounded experience selection also affect forgetting in a small neural classifier?",
+    "runs": 140,
+    "seeds": 20,
+    "architecture": "2 inputs, 32 tanh hidden units, 4 softmax outputs; 228 trainable parameters",
+    "data": "Synthetic four-class Gaussian data, fixed centers at (-1,-1), (-1,1), (1,-1), (1,1), standard deviation 0.35; classes arrive in four sequential blocks of 400 examples each",
+    "test": "1000 independently generated held-out examples per class, seed 90001; balanced test after each block",
+    "methods": [
+      "no_replay",
+      "fifo_32",
+      "fifo_128",
+      "reservoir_32",
+      "reservoir_128",
+      "class_coverage_32",
+      "class_coverage_128"
+    ],
+    "training": "One SGD update per arriving example, learning rate 0.05; replay methods add four uniformly sampled retained examples to the minibatch before inserting the current example",
+    "endpoints": [
+      "final balanced test accuracy",
+      "final accuracy on first three classes",
+      "processed training examples",
+      "training seconds excluding evaluation"
+    ],
+    "scope": "Small synthetic neural continual-learning demonstration; not language modeling, LLM pretraining, or real-world validation"
+  }
+}

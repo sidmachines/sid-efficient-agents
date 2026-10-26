@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "main_runs": 2100,
+  "neural_runs": 140,
+  "raw_main_checkpoints": 21000,
+  "raw_neural_checkpoints": 560,
+  "training_interactions": 6300000,
+  "primary_effect_recomputed": 0.010590041346029568,
+  "checks": [
+    "complete registered run matrix",
+    "source and protocol hashes",
+    "finite metrics and success bounds",
+    "buffer capacity",
+    "expected computation counts",
+    "array memory correction",
+    "neural training counts",
+    "primary effect recalculated from per-run data"
+  ]
+}

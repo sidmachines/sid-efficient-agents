@@ -1,0 +1,32 @@
+PROVENANCE AND CLAIM BOUNDARIES
+
+Source project: the user-supplied sid-efficient-agents-main folder.
+The copy under 06_Original_Project retains its original contents unchanged.
+
+Original contribution: project question, tabular gridworld implementations,
+and initial episode-budget experiments. Their historical paper and figures
+are included as supplied, not represented as rerun or newly verified results.
+
+This expansion: new interaction-budget experimental harness, exact evaluator,
+memory-selection comparisons, five environments, planning ablations, neural
+continual-learning extension, recorded metrics, bootstrap analysis, reports,
+and package index. Project attribution: SID Machines. All new reported numerical results
+were executed locally.
+
+The primary protocol was saved before execution, not publicly preregistered.
+No main-study outcome was used for hyperparameter tuning. The six-run smoke
+check used seed 943, separate from main seeds 0 through 19. A process-pool
+permission error led to serial execution; no main parameter changed.
+
+The byte-counter correction and paired seed-block bootstrap clarification are
+documented in analysis_decisions.txt. They do not change agent behavior.
+The neural extension was specified separately before its own execution and
+is labeled exploratory throughout.
+
+Free/local-only execution: no paid API, network model inference, GPU training,
+or production tool calls. Web access was used only for research references.
+The bibliography lists primary papers, with citation roles in references.json.
+
+Main paper status: completed local empirical research report, not peer-reviewed.
+Potential LLM applications remain untested. The proposed validation protocol
+must not be cited as a completed LLM benchmark or as proof of GPU savings.

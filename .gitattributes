@@ -1,0 +1,4 @@
+# Keep archived evidence byte-for-byte stable on all platforms.
+research/** -text
+*.png binary
+*.pdf binary

@@ -1,0 +1,19 @@
+{
+  "paper_pages": 10,
+  "supplement_pages": 5,
+  "all_pdf_pages_visually_reviewed": true,
+  "relative_html_links": "PASS",
+  "original_source_files_identical": 0,
+  "figure_label_review": "PASS",
+  "primary_result_verified": "PASS",
+  "deliverable_formats": [
+    "PDF",
+    "editable HTML",
+    "CSV",
+    "JSON",
+    "Python",
+    "PNG",
+    "vector PDF",
+    "ZIP"
+  ]
+}

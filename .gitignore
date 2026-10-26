@@ -2,3 +2,9 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
+.venv/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+research/03_Results/smoke*
